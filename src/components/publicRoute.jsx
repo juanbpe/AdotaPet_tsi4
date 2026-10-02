@@ -2,13 +2,14 @@ import { Navigate } from 'react-router'
 import { buscarUsuarioLogado } from '../services/storage'
 
 
-function ProtectedRoute({ children }){
+function PublicRoute({ children }){
     const usuario = buscarUsuarioLogado()
 
-    if(!usuario){
-        return <Navigate to="/login" replace />
+    if(usuario){
+        return <Navigate to="/animais" replace />
     }
+
     return children
 }
 
-export default ProtectedRoute
+export default PublicRoute

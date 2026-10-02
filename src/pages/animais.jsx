@@ -1,9 +1,15 @@
+import Navbar from '../components/navbar'
+
+
 function Animais(){
     return(
-        <main>
-            <h1>Animais disponíveis</h1>
-        </main>
-    );
+        <>
+            <Navbar />
+            <main>
+                <h1>Animais disponíveis</h1>
+            </main>
+        </>
+    )
 }
 
-export default Animais;
+export default Animais

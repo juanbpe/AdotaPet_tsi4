@@ -1,0 +1,130 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    width: 100%;
+
+    background-color: #fff;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 18px 24px;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.navbar-logo {
+    color: #2d6a4f;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.navbar-menu a {
+    color: #374151;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.navbar-menu a:hover {
+    color: #2d6a4f;
+}
+
+
+/* ========================================
+   USUÁRIO
+======================================== */
+
+.navbar-usuario {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    color: #4b5563;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   BOTÃO SAIR
+======================================== */
+
+.navbar-sair {
+    padding: 9px 16px;
+
+    background-color: transparent;
+    color: #2d6a4f;
+
+    border: 1px solid #2d6a4f;
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.navbar-sair:hover {
+    background-color: #2d6a4f;
+    color: #fff;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 750px) {
+
+    .navbar-container {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    .navbar-menu,
+    .navbar-usuario {
+        width: 100%;
+    }
+
+    .navbar-menu {
+        justify-content: space-between;
+    }
+
+    .navbar-usuario {
+        justify-content: space-between;
+    }
+}

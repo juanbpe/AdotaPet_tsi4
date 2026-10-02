@@ -1,0 +1,262 @@
+/* ========================================
+   PÁGINAS DE AUTENTICAÇÃO
+======================================== */
+
+.auth-page {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+
+    min-height: 100vh;
+
+    background-color: #fafaf7;
+}
+
+
+/* ========================================
+   ÁREA VISUAL
+======================================== */
+
+.auth-visual {
+    display: flex;
+    align-items: flex-end;
+
+    min-height: 100vh;
+
+    padding: 60px;
+
+    background:
+        linear-gradient(
+            rgba(45, 106, 79, 0.18),
+            rgba(45, 106, 79, 0.35)
+        ),
+        url('/img/auth-pet.jpg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-visual-conteudo {
+    max-width: 520px;
+
+    color: #fff;
+}
+
+.auth-marca {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.auth-visual-conteudo h1 {
+    margin-bottom: 18px;
+
+    font-size: 46px;
+    line-height: 1.08;
+}
+
+.auth-visual-conteudo p {
+    max-width: 460px;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   ÁREA DO FORMULÁRIO
+======================================== */
+
+.auth-form-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.auth-cabecalho {
+    margin-bottom: 30px;
+}
+
+.auth-logo {
+    display: block;
+
+    margin-bottom: 28px;
+
+    color: #2d6a4f;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.auth-cabecalho h2 {
+    margin-bottom: 8px;
+
+    color: #1f2937;
+
+    font-size: 32px;
+}
+
+.auth-cabecalho p {
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+.auth-campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.auth-campo label {
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.auth-campo input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background-color: #fff;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    color: #1f2937;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.auth-campo input:focus {
+    border-color: #2d6a4f;
+
+    box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.12);
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.auth-botao {
+    width: 100%;
+
+    margin-top: 8px;
+    padding: 13px 18px;
+
+    background-color: #2d6a4f;
+    color: #fff;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.auth-botao:hover {
+    background-color: #24583f;
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   ERROS
+======================================== */
+
+.auth-erro {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+
+    background-color: #fff1f2;
+    color: #b42318;
+
+    border: 1px solid #fecdd3;
+    border-radius: 9px;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   LINK ALTERNATIVO
+======================================== */
+
+.auth-alternativa {
+    margin-top: 22px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+.auth-alternativa a {
+    margin-left: 5px;
+
+    color: #2d6a4f;
+
+    font-weight: 700;
+}
+
+.auth-alternativa a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 850px) {
+
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-visual {
+        display: none;
+    }
+
+    .auth-form-area {
+        min-height: 100vh;
+
+        padding: 30px 20px;
+    }
+
+}
