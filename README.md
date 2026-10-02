@@ -27,15 +27,23 @@ Sistema demonstrativo desenvolvido em React para o seminário de Frameworks Web.
 npm install
 npm run dev
 
-Aí você clona o projeto e desenvolve.
+Aí você clona o projeto e desenvolve:
 
-git clone
+git clone https://github.com/juanbpe/AdotaPet_tsi4.git
 
 ---
 
-# Depois Git
+# Github
 
 ```powershell
-git init
+
+Após clonar o projeto:
+
+git pull > verificar se há atualizações (modificações feitas por outro usuário)
+
+
+Depois de desenvolvido sua parte:
+
 git add .
-git commit -m "chore: estrutura inicial do AdotaPet"
+git commit -m "Comentário breve sobre a atualização"
+git push
