@@ -1,15 +1,14 @@
 import { Routes, Route, Navigate } from 'react-router'
-
-import Login from './pages/Login'
-import Cadastro from './pages/Cadastro'
-import Animais from './pages/Animais'
-import AnimalDetalhes from './pages/AnimalDetalhes'
-import MinhasSolicitacoes from './pages/MinhasSolicitacoes'
+import ProtectedRoute from './components/protectedRoute'
+import Login from './pages/login'
+import Cadastro from './pages/cadastro'
+import Animais from './pages/animais'
+import AnimalDetalhes from './pages/animalDetalhes'
+import MinhasSolicitacoes from './pages/minhasSolicitacoes'
 
 function App() {
     return (
         <Routes>
-
             <Route
                 path="/"
                 element={<Navigate to="/login" replace />}
@@ -27,19 +26,30 @@ function App() {
 
             <Route
                 path="/animais"
-                element={<Animais />}
+                element={
+                    <ProtectedRoute>
+                        <Animais />
+                    </ProtectedRoute>
+                }
             />
 
             <Route
                 path="/animais/:id"
-                element={<AnimalDetalhes />}
+                element={
+                    <ProtectedRoute>
+                        <AnimalDetalhes />
+                    </ProtectedRoute>
+                }
             />
 
             <Route
                 path="/minhas-solicitacoes"
-                element={<MinhasSolicitacoes />}
+                element={
+                    <ProtectedRoute>
+                        <MinhasSolicitacoes />
+                    </ProtectedRoute>
+                }
             />
-
         </Routes>
     )
 }
