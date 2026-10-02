@@ -1,9 +1,15 @@
-function AnimalDetalhes(){
+import Navbar from '../components/navbar'
+
+
+function AnimailDetalhes(){
     return(
-        <main>
-            <h1>Detalhes do animal</h1>
-        </main>
-    );
+        <>
+            <Navbar />
+            <main>
+                <h1>Detalhes do animal</h1>
+            </main>
+        </>
+    )
 }
 
-export default AnimalDetalhes;
+export default AnimailDetalhes

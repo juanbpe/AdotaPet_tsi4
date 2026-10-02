@@ -1,9 +1,15 @@
+import Navbar from '../components/navbar'
+
+
 function MinhasSolicitacoes(){
     return(
-        <main>
-            <h1>Minhas solicitações</h1>
-        </main>
-    );
+        <>
+            <Navbar />
+            <main>
+                <h1>Minhas Solicitações</h1>
+            </main>
+        </>
+    )
 }
 
-export default MinhasSolicitacoes;
+export default MinhasSolicitacoes
