@@ -1,5 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router'
 import ProtectedRoute from './components/protectedRoute'
+import PublicRoute from './components/publicRoute'
+
 import Login from './pages/login'
 import Cadastro from './pages/cadastro'
 import Animais from './pages/animais'
@@ -16,12 +18,20 @@ function App() {
 
             <Route
                 path="/login"
-                element={<Login />}
+                element={
+                    <PublicRoute>
+                        <Login />
+                    </PublicRoute>
+                }
             />
 
             <Route
                 path="/cadastro"
-                element={<Cadastro />}
+                element={
+                    <PublicRoute>
+                        <Cadastro />
+                    </PublicRoute>
+                }
             />
 
             <Route
