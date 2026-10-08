@@ -1,0 +1,124 @@
+/* Área principal do catálogo */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    }
+    
+    /* Título */
+    main h1 {
+    color: #245d39;
+    font-size: 32px;
+    margin: 0 0 10px;
+    }
+    
+    /* Pesquisa e filtro */
+    main input,
+    main select {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    }
+    
+    main input {
+    width: 320px;
+    max-width: 100%;
+    margin: 12px 12px 12px 0;
+    }
+    
+    main select {
+    min-width: 190px;
+    max-width: 100%;
+    margin: 12px 0;
+    cursor: pointer;
+    }
+    
+    main input:focus,
+    main select:focus {
+    border-color: #43845a;
+    box-shadow: 0 0 0 3px rgba(67, 132, 90, 0.14);
+    }
+    
+    /* Grade dos animais */
+    .lista-animais {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+    }
+    
+    /* Card de cada animal */
+    .animal-card {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #e0e5e0;
+    border-radius: 14px;
+    padding: 24px;
+    width: 100%;
+    min-height: 150px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .animal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+    }
+    
+    /* Nome do animal */
+    .animal-card h2 {
+    color: #245d39;
+    font-size: 22px;
+    margin: 0 0 10px;
+    }
+    
+    /* Informações */
+    .animal-card p {
+    margin: 5px 0;
+    color: #374151;
+    line-height: 1.5;
+    }
+    
+    /* Mensagem sem resultados */
+    main > p {
+    margin-top: 12px;
+    color: #6b7280;
+    }
+    
+    /* Telas médias */
+    @media (max-width: 900px) {
+    .lista-animais {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    }
+    
+    /* Celulares */
+    @media (max-width: 600px) {
+    main {
+    padding: 24px 16px;
+    }
+    
+    
+    main h1 {
+        font-size: 26px;
+    }
+    
+    main input,
+    main select {
+        width: 100%;
+        margin: 8px 0;
+    }
+    
+    .lista-animais {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    
+    }
+    
