@@ -1,67 +1,64 @@
-import { Routes, Route, Navigate } from 'react-router'
-import ProtectedRoute from './components/protectedRoute'
-import PublicRoute from './components/publicRoute'
+import { Routes, Route, Navigate } from 'react-router';
+import ProtectedRoute from './components/protectedRoute';
+import PublicRoute from './components/publicRoute';
 
-import Login from './pages/login'
-import Cadastro from './pages/cadastro'
-import Animais from './pages/animais'
-import AnimalDetalhes from './pages/animalDetalhes'
-import MinhasSolicitacoes from './pages/minhasSolicitacoes'
+import Login from './pages/login';
+import Cadastro from './pages/cadastro';
+import Animais from './pages/animais';
+import AnimalDetalhes from './pages/animalDetalhes';
+import MinhasSolicitacoes from './pages/minhasSolicitacoes';
 
 function App() {
-    return (
-        <Routes>
-            <Route
-                path="/"
-                element={<Navigate to="/login" replace />}
-            />
+  return (
+    <Routes>
+      <Route path="/" element={<Navigate to="/login" replace />} />
 
-            <Route
-                path="/login"
-                element={
-                    <PublicRoute>
-                        <Login />
-                    </PublicRoute>
-                }
-            />
+      <Route
+        path="/login"
+        element={
+          <PublicRoute>
+            <Login />
+          </PublicRoute>
+        }
+      />
 
-            <Route
-                path="/cadastro"
-                element={
-                    <PublicRoute>
-                        <Cadastro />
-                    </PublicRoute>
-                }
-            />
+      <Route
+        path="/cadastro"
+        element={
+          <PublicRoute>
+            <Cadastro />
+          </PublicRoute>
+        }
+      />
 
-            <Route
-                path="/animais"
-                element={
-                    <ProtectedRoute>
-                        <Animais />
-                    </ProtectedRoute>
-                }
-            />
+      <Route
+        path="/animais"
+        element={
+          <ProtectedRoute>
+            <Animais />
+          </ProtectedRoute>
+        }
+      />
 
-            <Route
-                path="/animais/:id"
-                element={
-                    <ProtectedRoute>
-                        <AnimalDetalhes />
-                    </ProtectedRoute>
-                }
-            />
+      <Route
+        path="/animais/:id"
+        element={
+          <ProtectedRoute>
+            <AnimalDetalhes />
+          </ProtectedRoute>
+        }
+      />
 
-            <Route
-                path="/minhas-solicitacoes"
-                element={
-                    <ProtectedRoute>
-                        <MinhasSolicitacoes />
-                    </ProtectedRoute>
-                }
-            />
-        </Routes>
-    )
+      <Route
+        path="/minhas-solicitacoes"
+        element={
+          <ProtectedRoute>
+            <MinhasSolicitacoes />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
