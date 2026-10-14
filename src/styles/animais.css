@@ -1,0 +1,134 @@
+.animais-pagina {
+  width: calc(100% - 40px);
+  max-width: 1500px;
+  margin: 32px auto 60px;
+}
+
+.animais-pagina > h1 {
+  margin: 0 0 26px;
+  color: #2d6a4f;
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.animais-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 38px;
+}
+
+.animais-filtros input,
+.animais-filtros select {
+  min-height: 54px;
+  padding: 0 17px;
+  color: #222;
+  background: #fff;
+  border: 1px solid #cfd5dc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.animais-filtros input {
+  width: min(100%, 400px);
+}
+
+.animais-filtros select {
+  min-width: 230px;
+  cursor: pointer;
+}
+
+.animais-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.animal-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dfe5e0;
+  border-radius: 17px;
+  box-shadow: 0 5px 16px #00000010;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.animal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px #0000001c;
+}
+
+.animal-card-imagem {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #eaf4ef;
+}
+
+.animal-card-conteudo {
+  padding: 20px 22px 22px;
+}
+
+.animal-card-conteudo h2 {
+  margin: 0 0 15px;
+  color: #2d6a4f;
+  font-size: 27px;
+}
+
+.animal-card-conteudo p {
+  margin: 0 0 12px;
+  color: #29364a;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.animal-card-acao {
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 8px;
+  color: #2d6a4f;
+  font-weight: 700;
+}
+
+.animais-vazio {
+  padding: 28px;
+  color: #666;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+}
+
+@media (max-width: 1000px) {
+  .animais-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .animais-pagina {
+    width: calc(100% - 28px);
+    margin-top: 24px;
+  }
+
+  .animais-filtros {
+    margin-bottom: 25px;
+  }
+
+  .animais-filtros input,
+  .animais-filtros select {
+    width: 100%;
+  }
+
+  .animais-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .animal-card-imagem {
+    height: 230px;
+  }
+}
