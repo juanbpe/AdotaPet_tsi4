@@ -1,0 +1,238 @@
+.animal-detalhes {
+    width: calc(100% - 40px);
+    max-width: 1400px;
+    margin: 35px auto 60px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #555;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.voltar:hover {
+    color: #2d6a4f;
+}
+
+.animal-card-detalhes {
+    display: flex;
+    gap: 40px;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .07);
+}
+
+.animal-image {
+    flex: 0 0 420px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f4f4f4;
+    border-radius: 16px;
+}
+
+.sem-imagem {
+    text-align: center;
+    color: #888;
+}
+
+.sem-imagem span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 55px;
+}
+
+.sem-imagem p {
+    margin: 0;
+}
+
+.animal-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.especie-badge {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    background: #eaf4ef;
+    color: #2d6a4f;
+    border: 1px solid #cce3d7;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.animal-info h1 {
+    margin: 0 0 5px;
+    color: #222;
+    font-size: 40px;
+}
+
+.raca {
+    margin: 0 0 24px;
+    color: #777;
+    font-size: 17px;
+}
+
+.animal-dados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.dado {
+    padding: 12px 14px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.dado-label {
+    display: block;
+    margin-bottom: 4px;
+    color: #888;
+    font-size: 12px;
+}
+
+.dado strong {
+    color: #333;
+    font-size: 15px;
+}
+
+.descricao-box {
+    margin-bottom: 25px;
+    padding: 18px 20px;
+    background: #fafafa;
+    border-left: 4px solid #2d6a4f;
+    border-radius: 0 10px 10px 0;
+}
+
+.descricao-box h2 {
+    margin: 0 0 8px;
+    color: #222;
+    font-size: 17px;
+}
+
+.descricao-box p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.solicitacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 13px 15px;
+    background: #f8f8f8;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+}
+
+.status-label {
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status {
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.status-não-solicitada {
+    background: #eee;
+    color: #666;
+}
+
+.status-pendente {
+    background: #fff4d6;
+    color: #9a6b00;
+}
+
+.btn-adotar {
+    width: 100%;
+    padding: 14px 20px;
+    background: #2d6a4f;
+    color: #fff;
+    border: 1px solid #2d6a4f;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.btn-adotar:hover:not(:disabled) {
+    background: #23543e;
+    transform: translateY(-2px);
+}
+
+.btn-adotar:disabled {
+    background: #6c9b84;
+    border-color: #6c9b84;
+    cursor: default;
+}
+
+@media (max-width: 800px) {
+    .animal-detalhes {
+        width: calc(100% - 28px);
+        margin: 25px auto 45px;
+    }
+
+    .animal-card-detalhes {
+        flex-direction: column;
+        gap: 25px;
+        padding: 22px;
+    }
+
+    .animal-image {
+        flex: none;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .animal-info h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .animal-detalhes {
+        width: calc(100% - 20px);
+    }
+
+    .animal-card-detalhes {
+        padding: 16px;
+    }
+
+    .animal-dados {
+        grid-template-columns: 1fr;
+    }
+
+    .animal-info h1 {
+        font-size: 28px;
+    }
+
+    .solicitacao {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
